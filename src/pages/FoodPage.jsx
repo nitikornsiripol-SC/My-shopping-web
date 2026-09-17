@@ -1,5 +1,12 @@
+import { useState} from "react";
+
+
 function FoodPage() {
-    const [foodlists, setFoodlists] = useState(["ไข่ปลาอลาสกา ราดน้ำเกรวี่เห็ดแชมปิยอง", "ข้าวกระเพราเนื้อออสเตรเลียสับ กับไข่เยี่ยวม้าซัวเถา", "มาม่ากุ้งแห้ง พร้อมเครื่องปรุงที่เหลือครึ่งซอง"]);
+    const [foodlists, setFoodlists] = useState([
+        {id:1, name: "ไข่ปลาอลาสกา ราดน้ำเกรวี่เห็ดแชมปิยอง", price: 49950},
+        {id:2, name: "ข้าวกระเพราเนื้อออสเตรเลียสับ กับไข่เยี่ยวม้าซัวเถา", price: 350},
+        {id:3, name: "มาม่ากุ้งแห้ง พร้อมเครื่องปรุงที่เหลือครึ่งซอง", price: 6}
+    ]);
     return (
     <>
         <div className="flex justify-between">
@@ -17,7 +24,7 @@ function FoodPage() {
         </p>
 
         <h1 className="text-black-400 text-3xl md:text-5xl font-bold border-4 border-red-600 pb-2 pt-1 py-50 bg-red-400 mt-15 my-1">
-            Categories
+            Categories: Food
         </h1>
         
 
@@ -60,12 +67,23 @@ function FoodPage() {
 
       </div>
 
-      <p className="text-black-400 mt-10">
-        About us: This is demo WEB for code learning.
-      </p>
+      <ul className="bg-[#efd47c] p-[30px] rounded-xl shadow-md flex flex-col gap-2 w-full md:w-1/2">
+        
+        {foodlists.map((item) => (
+            <li className="bg-white p-2.5 px-3 rounded-lg shadow-sm flex justify-between items-center text-sm font-medium text-gray-700 list-none" key={item.id}>{item.name}
+                <button
+                    className="bg-red-500 hover:bg-red-600 active:scale-95 text-white text-xs px-2 py-1 rounded-md shadow-sm transition whitespace-nowrap"
+                    >
+                        {item.price} บาท
+                </button>
+            </li>
+
+        ))}
+                
+      </ul>
 
     </>
   );
 }
 
-export default HomePage;
+export default FoodPage;

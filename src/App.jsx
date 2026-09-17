@@ -5,14 +5,15 @@ import viteLogo from './assets/vite.svg'
 import './App.css' 
 
 import HomePage from './pages/HomePage'
+import FoodPage from './pages/FoodPage'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <HomePage>
+    <FoodPage>
 
-    </HomePage>
+    </FoodPage>
   )
 }
 

@@ -25,7 +25,7 @@ function HomePage() {
           type="submit"
           className="bg-red-600 hover:bg-[#ccc] text-black font-medium py-1 shadow-sm transition p-16 flex-1 border-black-400"
         >
-          Home page
+          Home
         </button>
 
         <button
