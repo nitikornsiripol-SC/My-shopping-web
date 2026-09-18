@@ -31,35 +31,35 @@ function FoodPage() {
       <div className="flex flex-row">
         <button
           type="submit"
-          className="bg-red-600 hover:bg-[#ccc] text-black font-medium py-1 shadow-sm transition p-16 flex-1 border-black-400"
+          className="bg-red-600 hover:bg-red-700 text-black font-medium py-1 shadow-sm transition p-16 flex-1 border-black-400"
         >
           Home page
         </button>
 
         <button
           type="submit"
-          className="bg-red-600 hover:bg-[#ccc] text-black font-medium py-1 shadow-sm transition p-16 flex-1 border-black-400"
+          className="bg-red-600 hover:bg-red-700 text-black font-medium py-1 shadow-sm transition p-16 flex-1 border-black-400"
         >
           Food
         </button>
 
         <button
           type="submit"
-          className="bg-red-600 hover:bg-[#ccc] text-black font-medium py-1 shadow-sm transition p-16 flex-1 border-black-400"
+          className="bg-red-600 hover:bg-red-700 text-black font-medium py-1 shadow-sm transition p-16 flex-1 border-black-400"
         >
           House
         </button>
 
         <button
           type="submit"
-          className="bg-red-600 hover:bg-[#ccc] text-black font-medium py-1 shadow-sm transition p-16 flex-1 border-black-400"
+          className="bg-red-600 hover:bg-red-700 text-black font-medium py-1 shadow-sm transition p-16 flex-1 border-black-400"
         >
           Medicine
         </button>
 
         <button
           type="submit"
-          className="bg-red-600 hover:bg-[#ccc] text-black font-medium py-1 shadow-sm transition p-16 flex-1 border-black-400"
+          className="bg-red-600 hover:bg-red-700 text-black font-medium py-1 shadow-sm transition p-16 flex-1 border-black-400"
         >
           Cloth
         </button>
