@@ -1,5 +1,5 @@
 import { useState} from "react";
-
+import { useEffect } from "react";
 
 function FoodPage() {
     const [foodlists, setFoodlists] = useState([
@@ -7,6 +7,17 @@ function FoodPage() {
         {id:2, name: "ข้าวกระเพราเนื้อออสเตรเลียสับ กับไข่เยี่ยวม้าซัวเถา", price: 350, image: "src/pages/page photo/Gemini_Generated_Image_ft2ipjft2ipjft2i.jpeg"},
         {id:3, name: "มาม่ากุ้งแห้ง พร้อมเครื่องปรุงที่เหลือครึ่งซอง", price: 6, image: "src/pages/page photo/Gemini_Generated_Image_p1oh6yp1oh6yp1oh.jpeg"}
     ]);
+
+const [cartitems, setCartitems] =useState([]);
+
+function AddtoCart(item) {
+    setCartitems([...cartitems, {name: item.name, price: item.price }]);
+}
+
+useEffect(() => {
+    console.log(cartitems);
+}, [cartitems]);
+
     return (
     <>
         <div className="flex justify-between">
@@ -71,13 +82,14 @@ function FoodPage() {
         
         {foodlists.map((item) => (
             <li className="bg-white p-2.5 px-3 rounded-lg shadow-sm flex justify-between items-center text-sm font-medium text-gray-700 list-none" key={item.id}><img className="w-1/2" src={item.image}/> {item.name}
-                <button
+                <span
                     className="bg-red-500 hover:bg-red-600 active:scale-95 text-white text-xs px-2 py-1 rounded-md shadow-sm transition whitespace-nowrap"
                     >
                         {item.price} บาท
-                </button>
+                </span>
 
                 <button
+                    onClick={() => AddtoCart(item)}
                     className="bg-red-500 hover:bg-red-600 active:scale-95 text-white text-xs px-2 py-1 rounded-md shadow-sm transition whitespace-nowrap"
                     >
                         Add to cart
