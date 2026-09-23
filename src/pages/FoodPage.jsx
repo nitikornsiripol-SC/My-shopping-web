@@ -1,5 +1,6 @@
 import { useState} from "react";
 import { useEffect } from "react";
+import { useCart } from "./CartPageContext.jsx"
 
 function FoodPage() {
     const [foodlists, setFoodlists] = useState([
@@ -8,11 +9,13 @@ function FoodPage() {
         {id:3, name: "มาม่ากุ้งแห้ง พร้อมเครื่องปรุงที่เหลือครึ่งซอง", price: 6, image: "src/pages/page photo/Gemini_Generated_Image_p1oh6yp1oh6yp1oh.jpeg"}
     ]);
 
-const [cartitems, setCartitems] =useState([]);
+//const [cartitems, setCartitems] =useState([]);
 
-function AddtoCart(item) {
-    setCartitems([...cartitems, {name: item.name, price: item.price }]);
-}
+const { cartitems } =useCart;
+
+//function AddtoCart(item) {
+//    setCartitems([...cartitems, {name: item.name, price: item.price }]);
+//}
 
 useEffect(() => {
     console.log(cartitems);
