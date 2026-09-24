@@ -1,6 +1,6 @@
 import { useState} from "react";
 import { useEffect } from "react";
-import { useCart } from "./CartPageContext.jsx"
+import { useCart } from "../context/CartPageContext.jsx"
 
 function FoodPage() {
     const [foodlists, setFoodlists] = useState([
@@ -11,15 +11,15 @@ function FoodPage() {
 
 //const [cartitems, setCartitems] =useState([]);
 
-const { cartitems } =useCart;
+const { cartItem, AddtoCart } =useCart();
 
 //function AddtoCart(item) {
-//    setCartitems([...cartitems, {name: item.name, price: item.price }]);
+//   setCartitems([...cartitems, {name: item.name, price: item.price }]);
 //}
 
 useEffect(() => {
-    console.log(cartitems);
-}, [cartitems]);
+    console.log(cartItem);
+}, [cartItem]);
 
     return (
     <>

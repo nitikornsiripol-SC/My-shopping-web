@@ -7,7 +7,7 @@ export function Cartpage({ children }) {
     const [cartItem, setCartitem] = useState([]);
 
     function AddtoCart(item) {
-    setCartitems([...cartitems, {name: item.name, price: item.price }]);
+    setCartitem([...cartItem, {name: item.name, price: item.price }]);
     }
 
 
