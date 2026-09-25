@@ -31,9 +31,10 @@ function CartPage() {
                     <thead>
                         <tr className="border-b-2 border-red-600 text-left">
                             <th className="py-2">ลำดับ</th>
-                            <th className="py-2">ชื่อสินค้า</th>
+                            <th className="py-2 text-center">ชื่อสินค้า</th>
+                            <th className="py-2">ราคาต่อหน่วย</th>
                             <th className="py-2">จำนวน</th>
-                            <th className="py-2">ราคารวม</th>
+                            <th className="py-2 text-center">ราคารวม</th>
                             
                         </tr>
                     </thead>
@@ -43,6 +44,7 @@ function CartPage() {
                             <tr key={index} className="border-b border-gray-300">
                               <td className="py-2">{index + 1}</td>
                               <td className="py-2">{item.name}</td>
+                              <td className="py-2">{item.price} บาท</td>
                               <td className="py-2 text-right">x{item.quantity} บาท</td>
                               <td className="py-2 text-right">
                                 {(item.price * item.quantity).toLocaleString()} บาท                            
@@ -53,7 +55,7 @@ function CartPage() {
 
                     <tfoot>
                         <tr className="font-bold">
-                            <td colSpan={2} className="py-3 text-right">รวมทั้งหมด</td>
+                            <td colSpan={4} className="py-3 text-right">รวมทั้งหมด</td>
                             <td className="py-3 text-right">{total.toLocaleString()} บาท</td>
                         </tr>
                     </tfoot>
